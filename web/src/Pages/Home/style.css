@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+} 
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(90deg, rgb(17, 14, 43),#c44242);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content{
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section img{
+    width: 100%;
+    max-width: 800px;
+    z-index: 1;
+}
+
+.content::after{
+    content: 'SPIDER';
+    position: absolute;
+    font-size: calc(6vw + 7vh);
+    left: 0;
+    font-weight: 600;
+    color: aliceblue;
+    text-shadow: 12px 2px 12px #000000a8;
+}
+
+.content::before{
+    content: 'MAN';
+    position: absolute;
+    font-size: calc(6vw + 7vh);
+    right: 0;
+    z-index: 2;
+    font-weight: 600;
+    color: aliceblue;
+    text-shadow: 12px 2px 12px #000000a8;
+}
+
+.text{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 400px;
+    z-index: 3;
+    color: aliceblue;
+    padding: 10px 10px;
+    background-color: rgba(0, 0, 0, 0.267);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+}
+
+.text h1{
+    font-size: 2rem;
+}
+
+.btns {
+   display: flex;
+}
+
+.btns button{
+    width: 130px;
+    height: 45px;
+    margin: 10px 30px 0 0;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    border: none;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 80%, 80% 100%, 0 100%, 0% 80%, 0% 20%);
+    background: rgb(252, 85, 85);
+    color: aliceblue;
+    cursor: pointer;
+    border-radius: 4px;
+}
