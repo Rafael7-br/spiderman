@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import '../Menu/style.css'
 import logo from '../../assets/images/logo.png'
+import spiderweb from '../../assets/images/logo2.png'
 
 export default function Navbar() {
 
@@ -23,6 +24,13 @@ const Links =[
         <div>
             <NavLink end to='/' className="nav-logo">
                 <img src={logo}/>
+                <div className='social'>
+                        <img src={spiderweb}/>
+                        <span></span>
+                          <i className="fa-brands fa-github"></i>
+                          <i className="fa-brands fa-linkedin"></i>
+                        <span></span>
+                      </div>
             </NavLink>
         </div>
           

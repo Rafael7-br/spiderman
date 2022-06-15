@@ -26,24 +26,31 @@ const ImageSlider = ({ slides }) => {
               {index === current && (
                 <section>
                     <div className='content'>
-
+                      
                         <div className='bg'>
-                            <span className='title'>{slide.title}</span>
                             <div className='imagem'>
+                                <h2>{slide.number}</h2>
                                 <img src={slide.image} alt='travel image'/>
                             </div>
-                            <span className='subtitle'>{slide.subtitle}</span>
                         </div>
 
-                        <div className='text'>
-                            <h1>{slide.name}</h1>
-                            <p>{slide.text}</p>
-                            <div className='btns'>
-                                <button  onClick={prevSlide} >ANTERIOR</button>
-                                <button  onClick={nextSlide} >PROXIMO</button>
+                        <div className='info'>
+                            <div className='textinfo'>
+                             
+                              <h1>{slide.name}</h1>
+                              
+                              <p>{slide.info}</p>
+                              
+                              <div className='btns'>
+                                  <button  onClick={prevSlide} >ANTERIOR</button>
+                                  <button  onClick={nextSlide} >PROXIMO</button>
+                              </div>
+                            </div>
+                            <div className='scroll'> 
+                              <span></span>
+                              <p>SCROLLDOWN</p>
                             </div>
                         </div>
-
                     </div>
                 </section>
                 
