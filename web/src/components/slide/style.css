@@ -7,30 +7,16 @@
     text-decoration: none;
 } 
 
-
-::-webkit-scrollbar {
-    width: 5px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    border-radius: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #ff9696; 
-    border-radius: 10px;
-  }
+body{
+    background: rgb(231, 237, 255);
+}
 
 section{
-    overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(90deg, rgb(17, 14, 43),#c44242);
 }
 
 .content{
@@ -67,7 +53,7 @@ section{
     width: 18px;
     height: 30px;
     border-radius: 30px;
-    border: 1px solid white;
+    border: 1px solid #333;
     margin-bottom: 20px;
     display: flex;
     justify-content: center;  
@@ -78,24 +64,17 @@ section{
     position: absolute;
     margin-top: 5px;
     width: 3px;
-    background: white;
+    background: #333;
     z-index: 1;
     border-radius: 30px;
     animation: scroll 1s infinite ease-in-out;
 }
 
-@keyframes scrollb {
-    0% {
-      height: 0px;
-    }
-    100% {
-      height: 7px;
-    }
-  }
-
 .info .scroll p{
     transform: rotate(90deg);
     font-size: 12px;
+    margin: 20px 0;
+    color: #333;
 }
 
 @keyframes scroll {
@@ -104,6 +83,17 @@ section{
     }
     100% {
       height: 7px;
+    }
+  }
+
+  @keyframes text {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
     }
   }
 
@@ -117,9 +107,10 @@ section{
     padding: 10px 10px 10px 55px;
 }
 
-.content .info p{
+.content .info .textinfo p{
     margin: 20px 0;
-    color: aliceblue;
+    color: #333;
+    animation:  text  1s ease-in-out;
 }
 
 .imagem h2{
@@ -127,7 +118,7 @@ section{
     right: 0;
     top: -30px;
     font-size: 1rem;
-    color: rgb(255, 255, 255);
+    color: #333;
 }
 
 .content .bg .imagem{
@@ -137,9 +128,10 @@ section{
  }
 
 .content .info h1{
-    color: aliceblue;
+    color: #333;
     font-size: 2rem;
     white-space: nowrap;
+    animation:  text  1s ease-in-out;
 }
 
 .content .bg img{
@@ -154,15 +146,16 @@ section{
     z-index: 2;
     animation: go-back 1s ease-in-out;
     object-fit: contain;
+    opacity: 1;
 }
 
 @keyframes go-back {
     0% {
-        transform: translateX(100px);
+        transform: translateY(100px);
         opacity: 0.1;
     }
     100% {
-        transform: translateX(0);
+        transform: translateY(0);
         opacity: 1;
     }
 }
@@ -180,15 +173,29 @@ section{
 }
 
 .btns button{
+    position: relative;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 45px;
+    background: none;
     outline: none;
-    border: none;
-    clip-path: polygon(20% 0%, 80% 0%, 100% 0, 100% 80%, 80% 100%, 0 100%, 0% 80%, 0% 20%);
-    background: rgb(252, 85, 85);
-    color: aliceblue;
+    border: 1px solid #333;
+    color: #333;
     cursor: pointer;
     border-radius: 4px;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.btns button i{
+    margin: 0 10px;
+}
+
+.btns button:hover{
+    background: aliceblue;
+    color: #333;
 }
 
 .btns button:nth-child(1){

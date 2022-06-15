@@ -29,7 +29,6 @@ const ImageSlider = ({ slides }) => {
                       
                         <div className='bg'>
                             <div className='imagem'>
-                                <h2>{slide.number}</h2>
                                 <img src={slide.image} alt='travel image'/>
                             </div>
                         </div>
@@ -42,8 +41,8 @@ const ImageSlider = ({ slides }) => {
                               <p>{slide.info}</p>
                               
                               <div className='btns'>
-                                  <button  onClick={prevSlide} >ANTERIOR</button>
-                                  <button  onClick={nextSlide} >PROXIMO</button>
+                                  <button  onClick={prevSlide} ><i className="fa-solid fa-arrow-left"></i>ANTERIOR</button>
+                                  <button  onClick={nextSlide} >PROXIMO<i className="fa-solid fa-arrow-right"></i></button>
                               </div>
                             </div>
                             <div className='scroll'> 

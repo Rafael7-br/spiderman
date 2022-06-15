@@ -6,6 +6,18 @@ import spiderweb from '../../assets/images/logo2.png'
 
 export default function Navbar() {
 
+
+    //change nav color
+    const [color, setColor] = useState(false)
+    const changeColor = () => {
+        if(window.scrollY >= 80){
+            setColor(true)
+        } else{
+            setColor(false)
+        }
+    }
+    window.addEventListener('scroll', changeColor)
+
 const [click, setClick] = useState(false);
 const handleClick = () => setClick(!click);
   
@@ -18,7 +30,7 @@ const Links =[
 
   return (
     <>
-    <header>
+    <header className={color ? 'header header-bg' : 'header'}>
         <nav>
 
         <div>
